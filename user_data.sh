@@ -1,6 +1,3 @@
-Ec2_UserData
-=====================
-
 #!/bin/bash
 yum update -y
 #安装docker
