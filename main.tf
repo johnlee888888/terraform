@@ -40,7 +40,7 @@ resource "aws_route_table" "lizy_aws_route_table" {
 
 resource "aws_route_table_association" "lizy_aws_route_table_association" {
   route_table_id = aws_route_table.lizy_aws_route_table.id
-  subnet_id = aws_subnet.lizy_outside_subnet
+  subnet_id = aws_subnet.lizy_outside_subnet.id
 }
 
 resource "aws_dynamodb_table" "lizy_dynamic_table" {
