@@ -5,6 +5,7 @@ provider "aws" {
 
 resource "aws_vpc" "lizy_aws_vpc" {
   cidr_block = "10.93.0.0/16"
+  enable_dns_hostnames = true
   tags = {
     Name = "lizy_aws_vpc"
   }
