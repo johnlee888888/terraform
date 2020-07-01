@@ -93,7 +93,7 @@ resource "aws_instance" "amazon_linux_2" {
   ami = "ami-0a1c2ec61571737db"
   instance_type = "t2.micro"
   key_name = "lizy_aws"
-  subnet_id = aws_subnet.lizy_outside_subnet
+  subnet_id = aws_subnet.lizy_outside_subnet.id
   iam_instance_profile = "WebService"
   security_groups = [aws_security_group.lizy_aws_allow_ssh_web.id]
   tags = {
