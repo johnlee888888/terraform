@@ -4,14 +4,14 @@ provider "aws" {
 }
 
 resource "aws_vpc" "lizy_aws_vpc" {
-  cidr_block = "10.92.0.0/16"
+  cidr_block = "10.93.0.0/16"
   tags = {
     Name = "lizy_aws_vpc"
   }
 }
 
 resource "aws_subnet" "lizy_outside_subnet" {
-  cidr_block = "10.92.1.0/24"
+  cidr_block = "10.93.1.0/24"
   vpc_id = aws_vpc.lizy_aws_vpc.id
   map_public_ip_on_launch = true
   availability_zone = "ap-northeast-1a"
